@@ -1,18 +1,18 @@
 import React, { Component } from "react";
 
 export default class Data extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      token: "",
-      devicesId:"",
-      data: null,
-      userName: "",
-      pwd: "",
-    };
-    this.fetchData = this.fetchData.bind(this)
-    this.renderData = this.renderData.bind(this)
-    this.login = this.login.bind(this)
+    constructor(props) {
+        super(props);
+        this.state = {
+            token: "",
+            devicesId:"",
+            data: null,
+            userName: "",
+            pwd: "",
+        };
+        this.fetchData = this.fetchData.bind(this)
+        this.renderData = this.renderData.bind(this)
+        this.login = this.login.bind(this)
   }
   login() {
     const {userName,pwd} = this.state
