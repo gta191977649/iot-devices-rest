@@ -32,8 +32,8 @@ export default class Data extends Component {
   fetchData() {
         const {token,devicesId} = this.state
         const dateTime = new Date().getTime();
-        const timestamp = Math.floor(dateTime / 1000);
-        fetch(`http://138.25.211.251:8080/api/plugins/telemetry/DEVICE/${devicesId}/values/timeseries?&keys=R,G,B,eui,lum,AC,DC,Group,light,Motion,Section,SoftwareId&startTs=1563952050710&endTs=1564000000000`,{
+        const timestamp = Math.floor(dateTime );
+        fetch(`http://138.25.211.251:8080/api/plugins/telemetry/DEVICE/${devicesId}/values/timeseries?&keys=R,G,B,eui,lum,AC,DC,Group,light,Motion,Section,SoftwareId&startTs=${timestamp-60000}&endTs=${timestamp}`,{
             method: 'GET',
             headers: new Headers({
                 'Content-Type': 'application/json',
